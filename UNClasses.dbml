@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNdb" Class="UNClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\UNdb.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="UN.Properties.Settings" SettingsPropertyName="UNdbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.medcin_info" Member="medcin_infos">
+    <Type Name="medcin_info">
+      <Column Name="m_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="national_num" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="injury_type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Deficit_ratio" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="injury_details" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="is_self_rely" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="is_Permanent_disability" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="is_Permanent_care" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="how_to_Execution" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="another_helps" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="who_helps" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="main_injuries_info_medcin_info" Member="main_injuries_info" ThisKey="national_num" OtherKey="national_num" Type="main_injuries_info" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.project_info" Member="project_infos">
+    <Type Name="project_info">
+      <Column Name="project_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="national_num" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mony_amount" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="given_side" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="given_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="main_injuries_info_project_info" Member="main_injuries_info" ThisKey="national_num" OtherKey="national_num" Type="main_injuries_info" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.users" Member="users">
+    <Type Name="user">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="password" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.damage_person_tb" Member="damage_person_tbs">
+    <Type Name="damage_person_tb">
+      <Column Name="name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="mother_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="national_number_type" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="national_number" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="phone_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="quarter" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="damage_person_tb_car_damage" Member="car_damages" ThisKey="national_number" OtherKey="national_number" Type="car_damage" />
+      <Association Name="damage_person_tb_real_estale_damage" Member="real_estale_damages" ThisKey="national_number" OtherKey="national_number" Type="real_estale_damage" />
+    </Type>
+  </Table>
+  <Table Name="dbo.car_damage" Member="car_damages">
+    <Type Name="car_damage">
+      <Column Name="national_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="c_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="city" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="year" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="category" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="damage_type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="damage_value" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="comp_worth_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="comp_worth_text" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="damage_person_tb_car_damage" Member="damage_person_tb" ThisKey="national_number" OtherKey="national_number" Type="damage_person_tb" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.real_estale_damage" Member="real_estale_damages">
+    <Type Name="real_estale_damage">
+      <Column Name="d_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="national_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="real_estate_id" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="real_estale_place" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="damage_value" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="comp_worth" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="electrical_equipment" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="final_comp_int" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="final_comp_text" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="comp_accepted" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="real_review" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Association Name="damage_person_tb_real_estale_damage" Member="damage_person_tb" ThisKey="national_number" OtherKey="national_number" Type="damage_person_tb" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.main_injuries_info" Member="main_injuries_infos">
+    <Type Name="main_injuries_info">
+      <Column Name="national_num_type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="national_num" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="full_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="m_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="govern" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="b_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="family_state" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="study_degree" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="child_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="phone_number" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="family_number" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="is_owner" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="house_state" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="money_state" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="another_funder" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="live_place" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Restriction_num" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="main_injuries_info_medcin_info" Member="medcin_infos" ThisKey="national_num" OtherKey="national_num" Type="medcin_info" />
+      <Association Name="main_injuries_info_project_info" Member="project_infos" ThisKey="national_num" OtherKey="national_num" Type="project_info" />
+      <Association Name="main_injuries_info_mititary_info" Member="mititary_infos" ThisKey="national_num" OtherKey="national_num" Type="mititary_info" />
+    </Type>
+  </Table>
+  <Table Name="dbo.org_table" Member="org_tables">
+    <Type Name="org_table">
+      <Column Name="ord_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="org_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="coming_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="visit_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="visit_purpose" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="visitor_name" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="visit_state" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mititary_info" Member="mititary_infos">
+    <Type Name="mititary_info">
+      <Column Name="military_id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="national_num" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="service_side" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="rank" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="inrol_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="injury_date" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="miltary_number" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="salary" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="compan_injury" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="injury_type" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Deficit_ratio" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="injury_details" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="who_helps" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="is_self_rely" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="is_permanent_disability" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="is_permanent_care" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="another_helps" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="how_to_Execution" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Association Name="main_injuries_info_mititary_info" Member="main_injuries_info" ThisKey="national_num" OtherKey="national_num" Type="main_injuries_info" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 13.25" name="UNClasses">
+  <DataContextMoniker Name="/UNClassesDataContext" />
+  <nestedChildShapes>
+    <classShape Id="d3616c20-746a-48fd-8fd1-f30b1717104b" absoluteBounds="2.75, 1.375, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/UNClassesDataContext/medcin_info" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6ed99b3b-0c48-408b-adf0-c798db6f9a40" absoluteBounds="2.765, 1.835, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="dd2f850c-eed5-4704-9d55-ff8a961fc691" absoluteBounds="2.625, 4.5, 2, 1.7708968098958327">
+      <DataClassMoniker Name="/UNClassesDataContext/project_info" />
+      <nestedChildShapes>
+        <elementListCompartment Id="36c6080d-b1e1-4916-b4cd-e9ecf1337f3c" absoluteBounds="2.64, 4.96, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e28a3980-6df0-4d3c-b306-78a1cfc4f7bb" absoluteBounds="0.625, 1.375, 2, 1.3862939453125">
+      <DataClassMoniker Name="/UNClassesDataContext/user" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a44cb9e2-c334-4921-9e4d-dca4864296fa" absoluteBounds="0.64000000000000012, 1.835, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="0cdad98a-8c05-4f75-a0ce-fedb87bf3d2c" absoluteBounds="4.375, 9.25, 2, 1.9631982421875005">
+      <DataClassMoniker Name="/UNClassesDataContext/damage_person_tb" />
+      <nestedChildShapes>
+        <elementListCompartment Id="0f1bf1c2-1daa-4f75-a311-87fcf477e594" absoluteBounds="4.39, 9.71, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="9120fabf-0a6f-4b60-b311-aa64c32e0974" absoluteBounds="8, 10.125, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/UNClassesDataContext/car_damage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="6eb499e3-7772-4670-bc57-ef348fcb54dd" absoluteBounds="8.015, 10.585, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(6.375 : 10.6690991210938); (8 : 10.6690991210938)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/UNClassesDataContext/damage_person_tb/damage_person_tb_car_damage" />
+      <nodes>
+        <classShapeMoniker Id="0cdad98a-8c05-4f75-a0ce-fedb87bf3d2c" />
+        <classShapeMoniker Id="9120fabf-0a6f-4b60-b311-aa64c32e0974" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="0042edaa-b24e-4263-bada-d6d7d3518d66" absoluteBounds="1, 9, 2, 2.9247054036458326">
+      <DataClassMoniker Name="/UNClassesDataContext/real_estale_damage" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5cd63e82-d7d8-479d-bd9d-3efa947d02fe" absoluteBounds="1.0150000000000001, 9.46, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(4.375 : 10.6530989583333); (3 : 10.6530989583333)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/UNClassesDataContext/damage_person_tb/damage_person_tb_real_estale_damage" />
+      <nodes>
+        <classShapeMoniker Id="0cdad98a-8c05-4f75-a0ce-fedb87bf3d2c" />
+        <classShapeMoniker Id="0042edaa-b24e-4263-bada-d6d7d3518d66" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="69ac5f5d-f102-495f-a898-082f28b9757e" absoluteBounds="5, 1.375, 2, 4.0785139973958326">
+      <DataClassMoniker Name="/UNClassesDataContext/main_injuries_info" />
+      <nestedChildShapes>
+        <elementListCompartment Id="2d2a717e-5cd8-4fc6-a021-572e813926f0" absoluteBounds="5.015, 1.835, 1.9700000000000002, 3.518513997395833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(5 : 2.66263956705729); (4.75 : 2.66263956705729)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/UNClassesDataContext/main_injuries_info/main_injuries_info_medcin_info" />
+      <nodes>
+        <classShapeMoniker Id="69ac5f5d-f102-495f-a898-082f28b9757e" />
+        <classShapeMoniker Id="d3616c20-746a-48fd-8fd1-f30b1717104b" />
+      </nodes>
+    </associationConnector>
+    <associationConnector edgePoints="[(5 : 4.71818155924479); (4.625 : 4.71818155924479)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/UNClassesDataContext/main_injuries_info/main_injuries_info_project_info" />
+      <nodes>
+        <classShapeMoniker Id="69ac5f5d-f102-495f-a898-082f28b9757e" />
+        <classShapeMoniker Id="dd2f850c-eed5-4704-9d55-ff8a961fc691" />
+      </nodes>
+    </associationConnector>
+    <classShape Id="c7cc5a96-a0f5-4505-be9f-4461bf226861" absoluteBounds="3.5, 7.875, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/UNClassesDataContext/org_table" />
+      <nestedChildShapes>
+        <elementListCompartment Id="ac75d5fc-81d2-41cc-b574-3722b3d5e85e" absoluteBounds="3.515, 8.335, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="23284032-c195-4b94-8341-c4886922b245" absoluteBounds="8.25, 5.125, 2, 4.2708154296875">
+      <DataClassMoniker Name="/UNClassesDataContext/mititary_info" />
+      <nestedChildShapes>
+        <elementListCompartment Id="cac5fc27-6517-4394-b57e-fce23511b44b" absoluteBounds="8.265, 5.585, 1.9700000000000002, 3.7108154296875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(7 : 3.2499995); (9.25 : 3.2499995); (9.25 : 5.125)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/UNClassesDataContext/main_injuries_info/main_injuries_info_mititary_info" />
+      <nodes>
+        <classShapeMoniker Id="69ac5f5d-f102-495f-a898-082f28b9757e" />
+        <classShapeMoniker Id="23284032-c195-4b94-8341-c4886922b245" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

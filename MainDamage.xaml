@@ -1,0 +1,57 @@
+﻿<Window x:Class="UN.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="إضافة متضرر" Height="482" Width="591" FontWeight="Bold" FlowDirection="RightToLeft" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" Icon="/UN;component/Images/user-add-icon%20%281%29.png">
+    <Grid Height="412" Width="542" FlowDirection="RightToLeft">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="465*" />
+            <RowDefinition Height="45*" />
+        </Grid.RowDefinitions>
+        <Label Content="الاسم الثلاثي" Height="28" HorizontalAlignment="Left" Margin="108,40,0,0" Name="label1" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF3E63AD" />
+        <TextBox Height="23" Margin="206,40,104,0" Name="name" VerticalAlignment="Top" TextAlignment="Center" FontWeight="Bold" />
+        <Label Content="اسم الأم" Height="28" HorizontalAlignment="Left" Margin="120,86,0,0" Name="label2" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF3E63AD" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="206,86,0,0" Name="mother_name" VerticalAlignment="Top" Width="232" TextAlignment="Center" FontWeight="Bold" />
+        <Label Content="الرقم الوطني" Height="28" HorizontalAlignment="Left" Margin="109,137,0,0" Name="label3" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF3E63AD" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="206,137,0,0" Name="nation_name" VerticalAlignment="Top" Width="72">
+            <ComboBoxItem Content="عسكري" />
+            <ComboBoxItem Content="مدني" IsSelected="True" />
+        </ComboBox>
+        <Label Content="رقم الهاتف" Height="28" HorizontalAlignment="Left" Margin="123,183,0,0" Name="label4" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF3E63AD" />
+        <TextBox Height="23" HorizontalAlignment="Right" Margin="0,137,104,0" Name="nation_num" VerticalAlignment="Top" Width="154" TextAlignment="Center" FontWeight="Bold" />
+        <Label Content="الربع" Height="28" HorizontalAlignment="Left" Margin="141,238,0,0" Name="label5" VerticalAlignment="Top" Background="{x:Null}" Foreground="#FF3E63AD" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="207,183,0,0" Name="phone_num" VerticalAlignment="Top" Width="231" TextAlignment="Center" FontWeight="Bold" />
+        <ComboBox Height="23" HorizontalAlignment="Right" Margin="0,238,275,0" Name="quarter_num" VerticalAlignment="Top" Width="72">
+            <ComboBoxItem Content="أول" IsSelected="True" />
+            <ComboBoxItem Content="ثان" />
+            <ComboBoxItem Content="ثالث" />
+            <ComboBoxItem Content="رابع" />
+        </ComboBox>
+        <Label Content="نوع الضرر" Height="28" HorizontalAlignment="Left" Margin="296,233,0,0" Name="damage_type" VerticalAlignment="Top" />
+        <ComboBox Height="23" HorizontalAlignment="Left" Margin="366,233,0,0" Name="damage_type1" VerticalAlignment="Top" Width="72">
+            <ComboBoxItem Content="منازل" IsSelected="True" />
+            <ComboBoxItem Content="سياحي" />
+            <ComboBoxItem Content="صناعي" />
+            <ComboBoxItem Content="سيارة" />
+            <ComboBoxItem Content="زراعي" />
+            <ComboBoxItem Content="تجاري" />
+        </ComboBox>
+        <Button Content="إضافة ضرر" Height="37" HorizontalAlignment="Left" Margin="253,301,0,0" Name="add" VerticalAlignment="Top" Width="64" Click="add_Click" />
+        <Label Content=" " Height="28" HorizontalAlignment="Left" Margin="186,437,0,0" Name="label6" VerticalAlignment="Top" />
+        <Button Content="إضافة متضرر" Height="38" HorizontalAlignment="Left" Margin="152,301,0,0" Name="button3" VerticalAlignment="Top" Width="75" Click="button3_Click" />
+        <StatusBar Height="23" HorizontalAlignment="Left" Margin="-3,0,0,0" Name="statusBar1" VerticalAlignment="Top" Width="550" Grid.Row="1">
+            <StatusBarItem>
+                <TextBlock Name="status" Style="{DynamicResource TextBlockBold}" />
+            </StatusBarItem>
+        </StatusBar>
+        <Button Content="تفريغ" Height="37" HorizontalAlignment="Left" Margin="336,302,0,0" Name="button1" VerticalAlignment="Top" Width="64" Click="button1_Click_1" />
+        <Border BorderBrush="Silver" BorderThickness="1" Height="250" HorizontalAlignment="Left" Margin="93,27,0,0" Name="border1" VerticalAlignment="Top" Width="379" />
+    </Grid>
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF3E63AD" Offset="0" />
+            <GradientStop Color="#FF3E63AD" Offset="1" />
+            <GradientStop Color="#FEE6E7F2" Offset="0.034" />
+            <GradientStop Color="#FEE6E7F2" Offset="0.966" />
+        </LinearGradientBrush>
+    </Window.Background>
+</Window>

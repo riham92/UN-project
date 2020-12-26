@@ -1,0 +1,45 @@
+﻿<Window x:Class="UN.real_stal_damag"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="إضافة ضرر عقاري" Height="694" Width="677" FontWeight="Bold" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" FlowDirection="RightToLeft" Icon="/UN;component/Images/Home-icon.png">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF3E63AD" Offset="0" />
+            <GradientStop Color="#FF3E63AD" Offset="1" />
+            <GradientStop Color="#FEE6E7F2" Offset="0.03" />
+            <GradientStop Color="#FEE6E7F2" Offset="0.97" />
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid>
+        <Label Content="رقم العقار" Height="28" HorizontalAlignment="Left" Margin="210,102,0,0" Name="label1" VerticalAlignment="Top" Width="73" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="317,107,0,0" Name="real_estate_id" VerticalAlignment="Top" Width="180" TextAlignment="Center" TabIndex="2" />
+        <Label Content="المنطقة العقارية" Height="28" HorizontalAlignment="Left" Margin="181,153,0,0" Name="label2" VerticalAlignment="Top" Width="102" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="317,158,0,0" Name="real_estale_place" VerticalAlignment="Top" Width="180" TextAlignment="Center" TabIndex="3" />
+        <Label Content="قيمة الضرر" Height="28" HorizontalAlignment="Left" Margin="191,322,0,0" Name="label3" VerticalAlignment="Top" Width="92" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="317,322,0,0" Name="damage_value" VerticalAlignment="Top" Width="180" TextAlignment="Center" TabIndex="6" />
+        <Label Content="التعويض المستحق" Height="28" HorizontalAlignment="Left" Margin="172,365,0,0" Name="label4" VerticalAlignment="Top" Width="111" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="317,370,0,0" Name="comp_worth" VerticalAlignment="Top" Width="180" TextAlignment="Center" TabIndex="7" />
+        <Label Content="التجهيزات الكهربائية" Height="28" HorizontalAlignment="Left" Margin="172,199,0,0" Name="label5" VerticalAlignment="Top" Width="111" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="317,0,0,104" Name="final_comp_text" VerticalAlignment="Bottom" Width="180" TextAlignment="Center" TabIndex="10" />
+        <Label Content="التعويض المقبوض" Height="28" HorizontalAlignment="Left" Margin="163,418,0,0" Name="label6" VerticalAlignment="Top" Width="111" />
+        <TextBox Height="25" HorizontalAlignment="Left" Margin="317,202,0,0" Name="electrical_equipment" VerticalAlignment="Top" Width="180" TextAlignment="Center" TabIndex="4" />
+        <Label Content="التعويض النهائي رقما" Height="28" HorizontalAlignment="Left" Margin="163,469,0,0" Name="label7" VerticalAlignment="Top" Width="126" />
+        <Label Content="التعويض النهائي كتابة" Height="28" HorizontalAlignment="Left" Margin="157,526,0,0" Name="label8" VerticalAlignment="Top" Width="126" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="317,423,0,0" Name="comp_accepted" VerticalAlignment="Top" Width="180" TextAlignment="Center" TabIndex="8" />
+        <TextBox Height="26" HorizontalAlignment="Left" Margin="317,480,0,0" Name="final_comp_int" VerticalAlignment="Top" Width="180" TextAlignment="Center" TabIndex="9" />
+        <CheckBox Content="تم إجراء الكشف الحالي" Height="38" HorizontalAlignment="Left" Margin="163,250,0,0" Name="real_review" VerticalAlignment="Top" Width="146" Checked="checkBox1_Checked" FlowDirection="RightToLeft" TabIndex="5" />
+        <Button Content="إضافة" Height="23" HorizontalAlignment="Left" Margin="248,585,0,0" Name="button1" VerticalAlignment="Top" Width="75" Click="button1_Click" TabIndex="11" />
+        <Label Content="رقم المتضرر" Height="28" HorizontalAlignment="Left" Margin="201,65,0,0" Name="label10" VerticalAlignment="Top" />
+        <TextBox Height="23" HorizontalAlignment="Left" Margin="317,65,0,0" Name="national_num" VerticalAlignment="Top" Width="180" TabIndex="1" />
+        <StatusBar Height="20" HorizontalAlignment="Left" Margin="53,614,0,0" Name="statusBar1" VerticalAlignment="Top" Width="562" >
+            <StatusBarItem>
+                <TextBlock Name="status" Style="{DynamicResource TextBlockBold}" />
+            </StatusBarItem>
+        </StatusBar>
+        <Label Content="بيانات الضرر" FontSize="15" FontWeight="Bold" Foreground="#FFE22323" Height="28" HorizontalAlignment="Left" Margin="282,281,0,0" Name="label9" VerticalAlignment="Top" Width="94" />
+        <Label Content="بيانات العقار" FontSize="15" FontWeight="Bold" Foreground="#FFE22323" Height="28" HorizontalAlignment="Left" Margin="282,21,0,0" Name="label11" VerticalAlignment="Top" Width="94" />
+        <Border BorderBrush="Silver" BorderThickness="1" Height="220" HorizontalAlignment="Left" Margin="130,53,0,0" Name="border1" VerticalAlignment="Top" Width="411"></Border>
+        <Border BorderBrush="Silver" BorderThickness="1" Name="border2" Width="411" Margin="130,315,114,86" />
+        <Button Content="تفريغ" Height="23" HorizontalAlignment="Left" Margin="340,585,0,0" Name="button2" VerticalAlignment="Top" Width="75" Click="button2_Click" TabIndex="12" />
+    </Grid>
+</Window>

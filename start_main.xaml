@@ -1,0 +1,547 @@
+﻿<Window x:Class="UN.start_main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="الرئيسية" Height="800" Loaded="Window_Loaded" WindowStartupLocation="CenterScreen" WindowState="Maximized" FlowDirection="RightToLeft" Width="1000" Icon="/UN;component/Images/Icons8-Ios7-Plants-Hand-Planting.ico" SnapsToDevicePixels="True">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FF3E63AD" Offset="0" />
+            <GradientStop Color="#FF273B96" Offset="1" />
+            <GradientStop Color="#FEE6E7F2" Offset="0.034" />
+            <GradientStop Color="#FEE6E8F2" Offset="0.97" />
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid Height="745" Width="966" Margin="6" Background="{x:Null}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="6*" />
+            <RowDefinition Height="268*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="59*" />
+            <ColumnDefinition Width="566*" />
+        </Grid.ColumnDefinitions>
+        <Menu Height="38" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="954" Grid.ColumnSpan="2" Grid.Row="1" Background="WhiteSmoke" FontWeight="Bold" Padding="8" Foreground="DarkGreen" FontFamily="Tahoma" FontSize="11">
+           
+            <MenuItem Header="إصابات" Click="MenuItem_Click" Margin="4" Padding="0" Foreground="DarkSlateBlue" BorderBrush="#FF1F1FB7" TabIndex="1">    
+                <MenuItem Header=" إضافة مصاب" Click="add_subItem1_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/UN;component/Images/user-add-icon.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="إضافةإصابة">
+                    <MenuItem.Icon>
+                        <Image Source="/UN;component/Images/Oxygen-Icons.org-Oxygen-Actions-contact-new.ico" />
+                    </MenuItem.Icon>
+                    <MenuItem  Header="مدنية" Click="add_subItem2_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/UN;component/Images/patient-icon.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="عسكرية" Click="add_subItem3_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/UN;component/Images/Medical-Army-Nurse-Male-Light-icon.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                
+                <MenuItem Header="إضافة مشروع" Click="add_subItem4_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/UN;component/Images/Icons8-Ios7-Plants-Hand-Planting.ico" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="enjury_reports" Header="تقارير">
+                    <MenuItem.Icon>
+                        <Image Source="/UN;component/Images/Treetog-Junior-Document-scroll.ico" />
+                    </MenuItem.Icon>
+                    <MenuItem Header="مشاريع" Click="add_subItem13_Click" >
+                        <MenuItem.Icon>
+                            <Image Source="/UN;component/Images/Icons8-Ios7-Plants-Hand-Planting.ico" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="مدنيون"  Click="add_subItem14_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/UN;component/Images/patient-icon.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="عسكريون"  Click="add_subItem15_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/UN;component/Images/Medical-Army-Nurse-Male-Light-icon.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </MenuItem>
+            
+            <MenuItem Header="أضرار" Margin="4" Padding="0" Foreground="DarkSlateBlue">
+                <MenuItem Header="إضافة متضرر" Click="add_subItem6_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/UN;component/Images/user-add-icon%20%281%29.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Header="إضافة ضرر">
+                    <MenuItem.Icon>
+                        <Image Source="/UN;component/Images/Oxygen-Icons.org-Oxygen-Actions-contact-new.ico" />
+                    </MenuItem.Icon>
+                    <MenuItem Header="سيارة" Click="add_subItem7_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/UN;component/Images/Car-Repair-icon.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="عقاري" Click="add_subItem8_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/UN;component/Images/Home-icon.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+                <MenuItem Name="damage_reports" Header="تقارير">
+                    <MenuItem.Icon>
+                        <Image Source="/UN;component/Images/Treetog-Junior-Document-scroll.ico" />
+                    </MenuItem.Icon>
+                    <MenuItem Header="سيارات" Click="add_subItem11_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/UN;component/Images/Car-Repair-icon.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+
+                    <MenuItem Header="عقارية" Click="add_subItem12_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/UN;component/Images/Home-icon.png" />
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="المنظمات" Margin="4" Padding="0" Foreground="DarkSlateBlue" Click="MenuItem_Click_1">
+                <MenuItem Header="إضافة منظمة" Click="add_subItem9_Click" Visibility="Visible">
+                    <MenuItem.Icon>
+                        <Image Source="/UN;component/Images/organization-icon.png" />
+                    </MenuItem.Icon>
+                </MenuItem>
+                <MenuItem Name="orgReports" Header="تقارير" Click="add_subItem10_Click" Visibility="Hidden">
+                    <MenuItem.Icon>
+                        <Image Source="/UN;component/Images/Treetog-Junior-Document-scroll.ico" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+            <MenuItem Header="حساب مدير" Margin="4" Padding="0" Foreground="DarkSlateBlue">
+                <MenuItem Name="loginOut" Header="تسجيل دخول" Click="add_subItem5_Click">
+                    <MenuItem.Icon>
+                        <Image Source="/UN;component/Images/Webiconset-Application-Register.ico" />
+                    </MenuItem.Icon>
+                </MenuItem>
+            </MenuItem>
+        </Menu>
+        <StackPanel Grid.Row="1" Height="202" HorizontalAlignment="Left" Margin="75,63,0,0" Name="login_panel" VerticalAlignment="Top" Width="261" Visibility="Visible" Background="WhiteSmoke" Grid.ColumnSpan="2">
+            <DockPanel Height="35" Name="dockPanel1" Width="229" Margin="20" LastChildFill="False">
+                <Label Content="اسم المستخدم" Height="28" Name="label1" FontWeight="Bold" Background="{x:Null}" Foreground="DarkBlue" />
+                <TextBox  Height="23" Name="username" Width="120" Background="White" FontWeight="Bold" TextAlignment="Center" />
+            </DockPanel>
+            <DockPanel Name="dockPanel2" Width="232" Margin="20">
+                <Label Content="كلمة المرور" Height="28" Name="label2" FontWeight="Bold" Background="{x:Null}" Foreground="DarkBlue" Margin="3" />
+                <PasswordBox Height="23" Name="password" Width="120" Background="White" FontWeight="Bold" />
+            </DockPanel>
+            <Button Height="45" Name="button1" Width="48" Click="button1_Click_1" Foreground="Crimson" FontWeight="Bold" ClickMode="Press">
+                <Button.Background>
+                    <ImageBrush ImageSource="/UN;component/Images/Webiconset-Application-Register.ico" />
+                </Button.Background>
+                <Button.Triggers>
+                    <EventTrigger SourceName="button1" RoutedEvent="Button.MouseEnter">
+                        <EventTrigger.Actions>
+                            <BeginStoryboard>
+                                <Storyboard>
+                                    <DoubleAnimation Storyboard.TargetName="button1" Storyboard.TargetProperty="Width" To="58" Duration="0:0:1.5">
+                                        <DoubleAnimation.EasingFunction>
+                                            <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                        </DoubleAnimation.EasingFunction>
+                                    </DoubleAnimation>
+                                    <DoubleAnimation Storyboard.TargetName="button1" Storyboard.TargetProperty="Width" To="48" Duration="0:0:1.5">
+                                        <DoubleAnimation.EasingFunction>
+                                            <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                        </DoubleAnimation.EasingFunction>
+                                    </DoubleAnimation>
+                                </Storyboard>
+                            </BeginStoryboard>
+                        </EventTrigger.Actions>
+                    </EventTrigger>
+                </Button.Triggers>
+            </Button>
+        </StackPanel>
+        <Button Height="201" Name="button2" Width="260" Grid.Column="1" Margin="529,64,86,464" Grid.Row="1" Click="button2_Click_1" ToolTip="إضافة مصاب">
+            <Button.Background>
+                <ImageBrush ImageSource="/UN;component/Images/user-add-icon.png" />
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger SourceName="button2" RoutedEvent="Button.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="button2" Storyboard.TargetProperty="Width" To="270" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="button2" Storyboard.TargetProperty="Width" To="260" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Height="201" Margin="529,276,86,252" Name="button3" Width="260" Grid.Row="1" Grid.Column="1" ToolTip="إضافة إصابة مدنية" Click="button3_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/UN;component/Images/patient-icon.png" />
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger SourceName="button3" RoutedEvent="Button.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="button3" Storyboard.TargetProperty="Width" To="270" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="button3" Storyboard.TargetProperty="Width" To="260" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Width="260" Margin="529,488,86,39" Name="button4" Grid.Column="1" Grid.Row="1" ToolTip="إضافة إصابة عسكرية" Click="button4_Click_1">
+            <Button.Background>
+                <ImageBrush ImageSource="/UN;component/Images/Medical-Army-Nurse-Male-Light-icon.png" />
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger SourceName="button4" RoutedEvent="Button.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="button4" Storyboard.TargetProperty="Width" To="270" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="button4" Storyboard.TargetProperty="Width" To="260" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Height="201" Margin="0,276,359,252" Name="button5" Width="260" Grid.Column="1" Grid.Row="1" ToolTip="إضافة ضرر سيارة" Click="button5_Click" HorizontalAlignment="Right">
+            <Button.Background>
+                <ImageBrush ImageSource="/UN;component/Images/Car-Repair-icon.png" />
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger SourceName="button5" RoutedEvent="Button.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="button5" Storyboard.TargetProperty="Width" To="270" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="button5" Storyboard.TargetProperty="Width" To="260" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Width="260" Margin="256,488,359,39" Name="button6" Grid.Row="1" ToolTip="إضافة ضرر عقاري" Click="button6_Click" Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/UN;component/Images/Home-icon.png" />
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger SourceName="button6" RoutedEvent="Button.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="button6" Storyboard.TargetProperty="Width" To="270" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="button6" Storyboard.TargetProperty="Width" To="260" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Height="201" Margin="254,63,361,464" Name="button7" Width="260" Grid.Row="1" ToolTip="إضافة متضرر" Click="button7_Click" Grid.Column="1">
+            <Button.Background>
+                <ImageBrush ImageSource="/UN;component/Images/user-add-icon%20%281%29.png" />
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger SourceName="button7" RoutedEvent="Button.MouseEnter">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetName="button7" Storyboard.TargetProperty="Width" To="270" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Storyboard.TargetName="button7" Storyboard.TargetProperty="Width" To="260" Duration="0:0:1.5">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10"></ElasticEase>
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.ColumnSpan="2" Height="201" Margin="76,276,630,252" Name="button9" ToolTip="إضافة منظمة" Width="260" Grid.Row="1" Click="button9_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/UN;component/Images/organization-icon.png" />
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="button9">
+                    <BeginStoryboard>
+                        <BeginStoryboard.Storyboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button9" Storyboard.TargetProperty="Width" To="270">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button9" Storyboard.TargetProperty="Width" To="260">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard.Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Grid.ColumnSpan="2" Height="201" Margin="75,489,631,39" Name="button10" ToolTip="إغلاق" Width="260" Grid.Row="1" Click="button10_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="/UN;component/Images/Sign-Shutdown-icon.png" />
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="button10">
+                    <BeginStoryboard>
+                        <BeginStoryboard.Storyboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button10" Storyboard.TargetProperty="Width" To="270">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button10" Storyboard.TargetProperty="Width" To="260">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard.Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Content="تقرير العقارات" FontFamily="Sakkal Majalla" FontSize="16" FontWeight="Bold" Name="button13" Width="86" Visibility="Hidden" Click="button13_Click" Foreground="#FF398FC0" Margin="78,63,802,572" Grid.Row="1" Grid.ColumnSpan="2">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF6B50F" Offset="0" />
+                    <GradientStop Color="#FFC0DF8C" Offset="1" />
+                    <GradientStop Color="#FFF0EBEA" Offset="0.886" />
+                    <GradientStop Color="#FFFAF5F4" Offset="0.16" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="button13">
+                    <BeginStoryboard>
+                        <BeginStoryboard.Storyboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button13" Storyboard.TargetProperty="Width" To="91">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button13" Storyboard.TargetProperty="Width" To="81">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard.Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Content="تقرير السيارات" FontFamily="Sakkal Majalla" FontSize="16" FontWeight="Bold" Name="button14" Width="81" Visibility="Hidden" Click="button14_Click" Foreground="#FF398FC0" Grid.Column="1" Margin="73,63,721,572" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF6B50F" Offset="0" />
+                    <GradientStop Color="#FFC0DF8C" Offset="1" />
+                    <GradientStop Color="#FFF0EBEA" Offset="0.886" />
+                    <GradientStop Color="#FFFAF5F4" Offset="0.16" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="button14">
+                    <BeginStoryboard>
+                        <BeginStoryboard.Storyboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button14" Storyboard.TargetProperty="Width" To="91">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button14" Storyboard.TargetProperty="Width" To="81">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard.Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Name="button15" Width="90" Content="تقرير المنظمات" FontWeight="Bold" FontFamily="Sakkal Majalla" FontSize="16" Visibility="Hidden" Click="button15_Click" Foreground="#FF398FC0" Grid.Column="1" Margin="154,63,631,572" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF6B50F" Offset="0" />
+                    <GradientStop Color="#FFC0DF8C" Offset="1" />
+                    <GradientStop Color="#FFF0EBEA" Offset="0.886" />
+                    <GradientStop Color="#FFFAF5F4" Offset="0.16" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="button15">
+                    <BeginStoryboard>
+                        <BeginStoryboard.Storyboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button15" Storyboard.TargetProperty="Width" To="91">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button15" Storyboard.TargetProperty="Width" To="81">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard.Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Content="تقرير إصابات ع" FontFamily="Sakkal Majalla" FontSize="16" FontWeight="Bold" Name="button16" Width="86" Visibility="Hidden" Foreground="#FF398FC0" Margin="78,173,802,464" Grid.Row="1" Grid.ColumnSpan="2" Click="button16_Click">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF6B000" Offset="0" />
+                    <GradientStop Color="#FF89D120" Offset="1" />
+                    <GradientStop Color="#FFF0EBEA" Offset="0.886" />
+                    <GradientStop Color="#FFFAF5F4" Offset="0.16" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="button16">
+                    <BeginStoryboard>
+                        <BeginStoryboard.Storyboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button16" Storyboard.TargetProperty="Width" To="91">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button16" Storyboard.TargetProperty="Width" To="81">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard.Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Content="تقرير إصابات م" FontFamily="Sakkal Majalla" FontSize="16" FontWeight="Bold" Name="button12" Width="81" Visibility="Hidden" Click="button12_Click" Foreground="#FF398FC0" Grid.Column="1" Margin="73,173,721,464" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF6B000" Offset="0" />
+                    <GradientStop Color="#FF89D120" Offset="1" />
+                    <GradientStop Color="#FFF0EBEA" Offset="0.886" />
+                    <GradientStop Color="#FFFAF5F4" Offset="0.16" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="button12">
+                    <BeginStoryboard>
+                        <BeginStoryboard.Storyboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button12" Storyboard.TargetProperty="Width" To="91">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button12" Storyboard.TargetProperty="Width" To="81">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard.Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+        <Button Content="تقرير المشاريع" FontFamily="Sakkal Majalla" FontSize="16" FontWeight="Bold" Name="button11" Width="90" Visibility="Hidden" Click="button11_Click" Foreground="#FF398FC0" Grid.Column="1" Margin="154,173,631,464" Grid.Row="1">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF6B000" Offset="0" />
+                    <GradientStop Color="#FF89D120" Offset="1" />
+                    <GradientStop Color="#FFF0EBEA" Offset="0.886" />
+                    <GradientStop Color="#FFFAF5F4" Offset="0.16" />
+                </LinearGradientBrush>
+            </Button.Background>
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="UIElement.MouseEnter" SourceName="button11">
+                    <BeginStoryboard>
+                        <BeginStoryboard.Storyboard>
+                            <Storyboard>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button11" Storyboard.TargetProperty="Width" To="91">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                                <DoubleAnimation Duration="0:0:1.5" Storyboard.TargetName="button11" Storyboard.TargetProperty="Width" To="81">
+                                    <DoubleAnimation.EasingFunction>
+                                        <ElasticEase EasingMode="EaseOut" Oscillations="10" />
+                                    </DoubleAnimation.EasingFunction>
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard.Storyboard>
+                    </BeginStoryboard>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+    </Grid>
+</Window>

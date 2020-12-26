@@ -1,0 +1,388 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1787CF4E-9E9E-41C6-B9AB-3BBDAB356325}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>UN</RootNamespace>
+    <AssemblyName>UN</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\</PublishUrl>
+    <Install>false</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>false</MapFileExtensions>
+    <TargetCulture>ar-SY</TargetCulture>
+    <ProductName>برنامج إدارة الأضرار و الإصابات و المشاريع</ProductName>
+    <PublisherName>رهام محمد - رهف زلف</PublisherName>
+    <ApplicationRevision>17</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>false</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>3A999592955BD976948CC3BFE25B0AE3F48AFC4A</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>UN_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>windowicon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CarReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CarReport.Designer.cs">
+      <DependentUpon>CarReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="car_tb.xaml.cs">
+      <DependentUpon>car_tb.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="civilreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="civilreport.Designer.cs">
+      <DependentUpon>civilreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DButils.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainDamage.xaml.cs">
+      <DependentUpon>MainDamage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="main_injuries.xaml.cs">
+      <DependentUpon>main_injuries.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="medicine_state.xaml.cs">
+      <DependentUpon>medicine_state.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="military.xaml.cs">
+      <DependentUpon>military.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="militaryreport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="militaryreport.Designer.cs">
+      <DependentUpon>militaryreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="organixation.xaml.cs">
+      <DependentUpon>organixation.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="OrgReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrgReport.Designer.cs">
+      <DependentUpon>OrgReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orgvalidation.cs" />
+    <Compile Include="projectrepocs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="projectrepocs.Designer.cs">
+      <DependentUpon>projectrepocs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ProjectReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProjectReport.Designer.cs">
+      <DependentUpon>ProjectReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="project_state.xaml.cs">
+      <DependentUpon>project_state.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RealEstateReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RealEstateReport.Designer.cs">
+      <DependentUpon>RealEstateReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="real_stal-damag.xaml.cs">
+      <DependentUpon>real_stal-damag.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="start_main.xaml.cs">
+      <DependentUpon>start_main.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UNClasses.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UNClasses.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="UNdbDataSet1.cs">
+      <DependentUpon>UNdbDataSet1.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UNdbDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UNdbDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Validation.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="car_tb.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="MainDamage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="main_injuries.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="medicine_state.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="military.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="organixation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="project_state.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="real_stal-damag.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="start_main.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="CarReport.resx">
+      <DependentUpon>CarReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="civilreport.resx">
+      <DependentUpon>civilreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="militaryreport.resx">
+      <DependentUpon>militaryreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OrgReport.resx">
+      <DependentUpon>OrgReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="projectrepocs.resx">
+      <DependentUpon>projectrepocs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProjectReport.resx">
+      <DependentUpon>ProjectReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RealEstateReport.resx">
+      <DependentUpon>RealEstateReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
+    <EmbeddedResource Include="Report10.rdlc" />
+    <EmbeddedResource Include="Report11.rdlc" />
+    <EmbeddedResource Include="Report12.rdlc" />
+    <EmbeddedResource Include="Report13.rdlc" />
+    <EmbeddedResource Include="Report2.rdlc" />
+    <EmbeddedResource Include="Report3.rdlc" />
+    <EmbeddedResource Include="Report4.rdlc" />
+    <EmbeddedResource Include="Report5.rdlc" />
+    <EmbeddedResource Include="Report6.rdlc" />
+    <EmbeddedResource Include="Report7.rdlc" />
+    <EmbeddedResource Include="Report8.rdlc" />
+    <EmbeddedResource Include="Report9.rdlc" />
+    <None Include="UNClasses.dbml.layout">
+      <DependentUpon>UNClasses.dbml</DependentUpon>
+    </None>
+    <None Include="app.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <None Include="UNClasses.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>UNClasses.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UNdbDataSet1.xsc">
+      <DependentUpon>UNdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UNdbDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UNdbDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UNdbDataSet1.xss">
+      <DependentUpon>UNdbDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="UN_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.10.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2008 Express</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\Webiconset-Application-Register.ico" />
+    <Resource Include="Images\Webiconset-Application-Login.ico" />
+    <Resource Include="Images\Oxygen-Icons.org-Oxygen-Actions-list-add-user.ico" />
+    <Resource Include="Images\Oxygen-Icons.org-Oxygen-Actions-contact-new.ico" />
+    <Resource Include="Images\Icons8-Ios7-Plants-Hand-Planting.ico" />
+    <Resource Include="Images\Treetog-Junior-Document-scroll.ico" />
+    <Resource Include="Images\user-add-icon.png" />
+    <Resource Include="Images\patient-icon.png" />
+    <Resource Include="Images\Medical-Army-Nurse-Male-Light-icon.png" />
+    <Resource Include="Images\Car-Repair-icon.png" />
+    <Resource Include="Images\Home-icon.png" />
+    <Resource Include="Images\user-add-icon %281%29.png" />
+    <Resource Include="Images\organization-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="windowicon.ico" />
+    <Resource Include="Images\Sign-Shutdown-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="UNdb.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="UNdb_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>UNdb.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
